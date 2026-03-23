@@ -10,8 +10,6 @@ const router = Router();
  *   get:
  *     summary: Listar todos os produtos
  *     tags: [Products]
- *     security:
- *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: Lista de produtos
@@ -22,7 +20,7 @@ const router = Router();
  *               items:
  *                 $ref: '#/components/schemas/Product'
  */
-router.get("/", authMiddleware, productController.list);
+router.get("/", productController.list);
 
 /**
  * @swagger

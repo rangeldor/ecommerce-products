@@ -7,7 +7,7 @@ export function createApp(): Express {
 	const app = express();
 
 	const allowedOrigins = (
-		process.env.ALLOWED_ORIGINS || "http://localhost:3005"
+		process.env.ALLOWED_ORIGINS || "http://localhost:3000,http://localhost:3005,http://localhost:3006,http://localhost:3007"
 	).split(",");
 
 	app.use(
